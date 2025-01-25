@@ -6,3 +6,8 @@
        yum:
         name: httpd
         state: present
+  
+     - name: start of httpd service
+       service:
+        name: httpd
+        state: started
