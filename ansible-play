@@ -1,0 +1,8 @@
+---
+ - name: creating a nsible playbook for practice
+   hosts: all
+   tasks:
+     - name: installing a httpd service
+       yum:
+        name: httpd
+        state: present
