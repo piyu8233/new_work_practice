@@ -11,3 +11,9 @@
        service:
         name: httpd
         state: started
+
+     - name: creating a new user in remote machine
+       user:
+        name: piyush
+        home: /home/piyush
+        shell: /bin/bash
