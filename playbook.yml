@@ -1,0 +1,14 @@
+---
+ - name: creating a playbook for test purpose
+   hosts: all
+   tasks:
+     - name: creation of group
+       group:
+         name: rayush
+         owner: rayush
+         perm: 644
+
+     - name: creating of a user
+       user:
+         name: rayush
+         group: rayush
