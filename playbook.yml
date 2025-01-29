@@ -12,3 +12,8 @@
        user:
          name: rayush
          group: rayush
+
+      - name: installing of nginx service
+        yum:
+         name: nginx
+         service: started
