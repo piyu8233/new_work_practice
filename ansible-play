@@ -1,15 +1,18 @@
 ---
  - name: creating a nsible playbook for practice
    hosts: all
+   vars:
+     - package: httpd
+     - service: httpd
    tasks:
      - name: installing a httpd service
        yum:
-        name: httpd
+        name: {{ package }}
         state: present
   
      - name: start of httpd service
        service:
-        name: httpd
+        name: {{ service }}
         state: started
 
      - name: creating a new user in remote machine
